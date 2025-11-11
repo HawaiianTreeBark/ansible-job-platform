@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>运维自动化作业平台 · 免费部署</title>
+  <meta name="description" content="企业级Ansible自动化作业平台：集中托管Playbook资产、动态Inventory调度、安全凭证托管与操作合规审计。" />
+  <meta name="keywords" content="Ansible, 自动化运维, 作业平台, Playbook, 任务调度, 安全审计, Credential Vault" />
+
+  <meta property="og:title" content="运维自动化作业平台 · 免费部署">
+  <meta property="og:description" content="企业级Ansible自动化作业平台：集中托管Playbook资产、动态Inventory调度、安全凭证托管与操作合规审计。">
+  <meta property="og:image" content="https://ansible.ops-coffee.com/og-image.png">
+  <meta property="og:url" content="https://ansible.ops-coffee.com">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.ico" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body class="antialiased">
+
+<header class="sticky top-0 z-40 bg-white/60 backdrop-blur-md border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-4">
+      <div class="text-xl font-bold text-slate-900">运维自动化作业平台</div>
+      <span class="text-sm text-slate-500">Ansible · 安全 · 可控</span>
+    </div>
+    <nav class="hidden md:flex items-center gap-6 text-sm text-slate-700">
+      <a href="#why" class="hover:text-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-500 rounded">痛点</a>
+      <a href="#capabilities" class="hover:text-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-500 rounded">能力</a>
+      <a href="#workflow" class="hover:text-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-500 rounded">流程</a>
+      <a href="#security" class="hover:text-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-500 rounded">安全</a>
+      <a href="https://blog.ops-coffee.com/devops/ansible-comments.html" class="hover:text-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-500 rounded">反馈</a>
+      <a href="https://blog.ops-coffee.com/devops/ansible.html" class="hover:text-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-500 rounded">文档</a>
+      <a href="https://github.com/ops-coffee/ansible-job-platform" class="px-3 py-2 border border-slate-200 rounded-md text-slate-800 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-sky-500">免费下载</a>
+    </nav>
+
+    <button id="menu-btn" class="mobile-menu-btn md:hidden">
+      <i class="ri-menu-line text-xl"></i>
+    </button>
+
+    <div id="mobile-nav" class="mobile-nav md:hidden text-slate-700 text-sm">
+      <a href="#why">痛点</a>
+      <a href="#capabilities">能力</a>
+      <a href="#workflow">流程</a>
+      <a href="#security">安全</a>
+      <a href="https://blog.ops-coffee.com/devops/ansible-comments.html">反馈</a>
+      <a href="https://blog.ops-coffee.com/devops/ansible.html">文档</a>
+      <a href="https://github.com/ops-coffee/ansible-job-platform" class="text-sky-600 font-medium">免费下载</a>
+    </div>
+
+  </div>
+</header>
+
+<main class="pt-10">
+<section class="w-full max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+  <div data-aos="fade-right" class="order-1 lg:order-1 w-full max-w-full">
+    <div class="badge inline-block animate-slide-in">免费</div>
+    <h1 class="mt-4 sm:mt-6 text-3xl sm:text-4xl lg:text-5xl font-extrabold hero-gradient leading-tight">
+      企业级 Ansible 自动化作业服务中枢
+    </h1>
+    <p class="mt-4 sm:mt-6 text-base sm:text-lg text-slate-600 leading-relaxed">
+      集中托管 <strong>Playbook 资产</strong>，实现 <strong>动态 Inventory</strong> 调度，并提供企业级 <strong>凭证安全托管</strong> 与 <strong>操作合规审计</strong>。
+    </p>
+
+    <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row flex-wrap gap-4 w-full">
+      <a href="https://ansible.ops-coffee.com"
+         class="px-6 py-3 rounded-md bg-sky-600 text-white shadow-lg hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 transition text-center w-full sm:w-auto">
+         部署文档
+      </a>
+      <a href="https://github.com/ops-coffee/ansible-job-platform"
+         class="px-6 py-3 rounded-md border border-slate-200 text-slate-800 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-sky-500 transition flex items-center gap-1 justify-center w-full sm:w-auto">
+         <i class="ri-download-line"></i> 免费下载
+      </a>
+    </div>
+
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-700 w-full">
+      <div class="card flex items-start gap-4 w-full p-4">
+        <i class="ri-shield-keyhole-line text-2xl text-sky-600 flex-shrink-0"></i>
+        <div class="min-w-0">
+          <div class="font-medium">凭证安全托管</div>
+          <p class="text-xs text-slate-500">私钥 AES 加密存储，执行时动态注入，凭证不落地</p>
+        </div>
+      </div>
+      <div class="card flex items-start gap-4 w-full p-4">
+        <i class="ri-server-line text-2xl text-sky-600 flex-shrink-0"></i>
+        <div class="min-w-0">
+          <div class="font-medium">动态 Inventory</div>
+          <p class="text-xs text-slate-500">统一主机资产管理，支持业务维度灵活分组和精确调度</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div data-aos="fade-left" class="relative order-2 lg:order-2 flex justify-center w-full max-w-full overflow-hidden">
+    <div class="card w-full max-w-none overflow-hidden p-4 sm:p-6">
+      <div class="flex items-center justify-between mb-4 flex-wrap">
+        <div class="mr-4 mb-2 sm:mb-0">
+          <div class="text-sm text-slate-500">总主机数</div>
+          <div class="text-2xl font-bold">2,560</div>
+        </div>
+        <div>
+          <div class="text-sm text-slate-500">今日作业成功率</div>
+          <div class="text-2xl font-bold text-green-600">98.5%</div>
+        </div>
+      </div>
+
+      <div class="swiper-container w-auto max-w-full h-auto aspect-[16/9] rounded-lg border border-slate-100 overflow-hidden">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide flex items-center justify-center bg-slate-50">
+            <img src="https://static.ops-coffee.com/static/images/2025/1112.01.png"
+                 alt="作业执行界面截图"
+                 class="w-full h-full object-contain">
+          </div>
+          <div class="swiper-slide flex items-center justify-center bg-slate-50">
+            <img src="https://static.ops-coffee.com/static/images/2025/1112.02.png"
+                 alt="任务调度列表截图"
+                 class="w-full h-full object-contain">
+          </div>
+          <div class="swiper-slide flex items-center justify-center bg-slate-50">
+            <img src="https://static.ops-coffee.com/static/images/2025/1112.03.png"
+                 alt="主机资产管理截图"
+                 class="w-full h-full object-contain">
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+      <div class="mt-4 grid grid-cols-3 gap-3 text-xs text-slate-500 text-center">
+        <div>即时作业</div>
+        <div>周期任务</div>
+        <div>操作历史</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="max-w-7xl mx-auto px-6 py-12" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-slate-800 text-center">常见痛点（为什么选择我们）</h2>
+  <div class="mt-8 grid md:grid-cols-3 gap-6">
+    <div class="card flex items-start gap-4 animate-slide-in">
+      <i class="ri-key-2-line text-3xl text-rose-500"></i>
+      <div>
+        <h3 class="font-medium">凭证分散，安全失控</h3>
+        <p class="mt-2 text-slate-600">SSH 私钥、连接密码等凭证散落在个人，缺乏统一加密存储和权限隔离。</p>
+      </div>
+    </div>
+    <div class="card flex items-start gap-4 animate-slide-in">
+      <i class="ri-git-branch-line text-3xl text-amber-500"></i>
+      <div>
+        <h3 class="font-medium">自动化资产混乱，难以复用</h3>
+        <p class="mt-2 text-slate-600">Playbook/脚本缺乏版本控制，自动化能力被少数专家垄断，难以赋能。</p>
+      </div>
+    </div>
+    <div class="card flex items-start gap-4 animate-slide-in">
+      <i class="ri-file-search-line text-3xl text-sky-500"></i>
+      <div>
+        <h3 class="font-medium">操作黑盒，合规性缺失</h3>
+        <p class="mt-2 text-slate-600">难以有效追踪“操作人、目标主机、执行命令”，无法满足安全审计和合规要求。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="capabilities" class="max-w-7xl mx-auto px-6 py-16" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-slate-800 text-center mb-8">八大核心能力 · 提升企业自动化效率与安全性</h2>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    <div class="card flex flex-col items-start p-6">
+      <div class="flex items-center gap-4 mb-3">
+        <i class="ri-server-line text-2xl text-sky-600"></i>
+        <h3 class="font-medium text-lg text-slate-800">1. 动态 Inventory</h3>
+      </div>
+      <p class="text-sm text-slate-600">集中管理主机资产，通过业务关系实现动态分组，告别静态清单（Static Inventory）。</p>
+    </div>
+
+    <div class="card flex flex-col items-start p-6">
+      <div class="flex items-center gap-4 mb-3">
+        <i class="ri-lock-2-line text-2xl text-sky-600"></i>
+        <h3 class="font-medium text-lg text-slate-800">2. 凭证安全托管</h3>
+      </div>
+      <p class="text-sm text-slate-600">私钥 AES-256 加密存储，执行时动态解密并注入 Ansible 环境，遵循凭证不落地原则。</p>
+    </div>
+
+    <div class="card flex flex-col items-start p-6">
+      <div class="flex items-center gap-4 mb-3">
+        <i class="ri-file-code-line text-2xl text-sky-600"></i>
+        <h3 class="font-medium text-lg text-slate-800">3. Playbook版本控制</h3>
+      </div>
+      <p class="text-sm text-slate-600">内置在线编辑器管理自动化资产，提供完整的版本历史和代码变更对比功能。</p>
+    </div>
+
+    <div class="card flex flex-col items-start p-6">
+      <div class="flex items-center gap-4 mb-3">
+        <i class="ri-run-line text-2xl text-sky-600"></i>
+        <h3 class="font-medium text-lg text-slate-800">4. 能力服务化</h3>
+      </div>
+      <p class="text-sm text-slate-600">将复杂 Playbook 封装为简单易用的“作业模板”，授权团队成员通过 Web UI 一键触发。</p>
+    </div>
+
+    <div class="card flex flex-col items-start p-6">
+      <div class="flex items-center gap-4 mb-3">
+        <i class="ri-timer-line text-2xl text-sky-600"></i>
+        <h3 class="font-medium text-lg text-slate-800">5. 周期性任务调度</h3>
+      </div>
+      <p class="text-sm text-slate-600">基于 Crontab 表达式，提供高可靠的周期性任务调度，支持无人值守的自动化维护。</p>
+    </div>
+
+    <div class="card flex flex-col items-start p-6">
+      <div class="flex items-center gap-4 mb-3">
+        <i class="ri-forbid-line text-2xl text-sky-600"></i>
+        <h3 class="font-medium text-lg text-slate-800">6. 高风险操作拦截</h3>
+      </div>
+      <p class="text-sm text-slate-600">通过正则表达式配置高危命令过滤规则，在任务执行前进行拦截，确保生产环境安全。</p>
+    </div>
+
+    <div class="card flex flex-col items-start p-6">
+      <div class="flex items-center gap-4 mb-3">
+        <i class="ri-shield-user-line text-2xl text-sky-600"></i>
+        <h3 class="font-medium text-lg text-slate-800">7. SSH 网关收敛</h3>
+      </div>
+      <p class="text-sm text-slate-600">支持配置 SSH 跳板机/网关，将任务连接流量收敛至特定路径，简化网络安全管理。</p>
+    </div>
+
+    <div class="card flex flex-col items-start p-6">
+      <div class="flex items-center gap-4 mb-3">
+        <i class="ri-history-line text-2xl text-sky-600"></i>
+        <h3 class="font-medium text-lg text-slate-800">8. 操作审计与追溯</h3>
+      </div>
+      <p class="text-sm text-slate-600">完整的任务执行日志和结果，满足 SOX/等保等合规要求，并支持失败任务一键重做。</p>
+    </div>
+  </div>
+</section>
+
+<section id="workflow" class="max-w-7xl mx-auto px-6 py-16" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-slate-800 text-center mb-8">自动化作业的核心流程</h2>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm text-slate-700">
+    <div class="text-center p-4">
+      <h4 class="font-medium mb-2 text-base">1. 资产与凭证定义</h4>
+      <p class="mt-2 text-slate-600 text-sm">在 <strong>主机管理</strong> 定义目标服务器，将 SSH 私钥托管至 <strong>系统用户</strong>，完成自动化准备工作。</p>
+    </div>
+    <div class="text-center p-4">
+      <h4 class="font-medium mb-2 text-base">2. 编排与规则制定</h4>
+      <p class="mt-2 text-slate-600 text-sm">在 <strong>剧本管理</strong> 编写 Playbook，通过 <strong>命令过滤</strong> 模块设定安全红线，定义操作范围。</p>
+    </div>
+    <div class="text-center p-4">
+      <h4 class="font-medium mb-2 text-base">3. 任务调度与执行</h4>
+      <p class="mt-2 text-slate-600 text-sm">通过 <strong>作业执行 (Ad-Hoc)</strong> 或 <strong>作业列表 (Task)</strong> 触发任务，平台动态构建执行环境并校验安全规则。</p>
+    </div>
+    <div class="text-center p-4">
+      <h4 class="font-medium mb-2 text-base">4. 结果追溯与合规</h4>
+      <p class="mt-2 text-slate-600 text-sm">执行结果、详细输出和操作人等信息实时保存于 <strong>作业历史</strong> 模块，确保操作全程可审计。</p>
+    </div>
+  </div>
+</section>
+
+<section id="security" class="max-w-7xl mx-auto px-6 py-16" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-slate-800 text-center mb-8">平台内建的纵深安全与合规</h2>
+  <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-6 text-slate-700">
+    <div class="card p-6 flex flex-col items-start">
+      <i class="ri-lock-line text-2xl text-sky-600 mb-2"></i>
+      <h4 class="font-medium text-lg">凭证不落地原则</h4>
+      <p class="mt-2 text-sm text-slate-600">加密私钥仅在内存中使用，任务结束后立即销毁，杜绝凭证泄露风险。</p>
+    </div>
+    <div class="card p-6 flex flex-col items-start">
+      <i class="ri-shield-check-line text-2xl text-sky-600 mb-2"></i>
+      <h4 class="font-medium text-lg">细粒度访问控制 (RBAC)</h4>
+      <p class="mt-2 text-sm text-slate-600">基于角色的权限模型，支持对主机组、作业模板、功能模块进行精确授权。</p>
+    </div>
+    <div class="card p-6 flex flex-col items-start">
+      <i class="ri-file-list-3-line text-2xl text-sky-600 mb-2"></i>
+      <h4 class="font-medium text-lg">不可篡改的审计日志</h4>
+      <p class="mt-2 text-sm text-slate-600">所有操作和执行结果均记录在案，作为合规审计的唯一证据链。</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="comparison" class="max-w-7xl mx-auto px-6 py-16" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-slate-800 text-center mb-8">与传统 Ansible 模式对比</h2>
+  <div class="scroll-x">
+    <table class="w-full" role="table" style="border-collapse: collapse;">
+      <caption class="sr-only">运维自动化作业平台与传统 Ansible 模式对比表</caption>
+      <thead>
+        <tr>
+          <th scope="col" style="min-width: 150px;">功能</th>
+          <th scope="col" style="min-width: 300px;">传统 Ansible (Git + CLI)</th>
+          <th scope="col" style="min-width: 300px;">运维自动化作业平台</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>主机清单 (Inventory)</td>
+          <td class="text-rose-600">❌ 静态 <code>hosts</code> 文件，维护复杂</td>
+          <td class="text-sky-600 font-medium">✅ 动态 Inventory，按业务实时分组</td>
+        </tr>
+        <tr>
+          <td>SSH 凭证安全</td>
+          <td class="text-rose-600">❌ 凭证分散，依赖 Vault 手动加密</td>
+          <td class="text-sky-600 font-medium">✅ 集中加密托管，动态注入，凭证不落地</td>
+        </tr>
+        <tr>
+          <td>高风险操作控制</td>
+          <td class="text-rose-600">❌ 缺乏事前拦截和校验</td>
+          <td class="text-sky-600 font-medium">✅ 内置命令过滤规则，强制执行安全规范</td>
+        </tr>
+        <tr>
+          <td>任务调度</td>
+          <td class="text-rose-600">❌ 依赖 Crontab，缺乏统一管理</td>
+          <td class="text-sky-600 font-medium">✅ Web UI 调度中心，支持高可靠周期性任务</td>
+        </tr>
+        <tr>
+          <td>操作审计</td>
+          <td class="text-rose-600">❌ 依赖 Shell 历史或日志分析</td>
+          <td class="text-sky-600 font-medium">✅ 完整的作业历史，满足合规追溯要求</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="download" class="max-w-7xl mx-auto px-6 py-16 bg-sky-50 rounded-lg text-center" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-slate-800 mb-6">立即免费部署</h2>
+  <p class="text-slate-700 mb-8">通过 Docker 或源码，快速构建企业级自动化作业平台，提升运维效率和规范性。</p>
+  <a href="https://github.com/ops-coffee/ansible-job-platform" class="px-8 py-4 bg-sky-600 text-white rounded-md text-lg shadow-lg hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 transition inline-flex items-center justify-center"><i class="ri-download-line mr-2"></i> 免费下载</a>
+</section>
+
+<footer class="bg-white border-t border-gray-100 mt-16">
+  <div class="max-w-7xl mx-auto px-6 py-12 grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-slate-700">
+    <div>
+      <h3 class="font-semibold mb-4">运维自动化作业平台</h3>
+      <p class="text-sm">企业级 Ansible 自动化服务中枢，让配置管理变得更安全、更可控、更易用。</p>
+    </div>
+    <div>
+      <h3 class="font-semibold mb-4">联系我们</h3>
+      <ul class="space-y-2 text-sm">
+        <li>邮箱: <a href="mailto:ops_coffee@163.com" class="text-sky-600 hover:underline">ops_coffee@163.com</a></li>
+        <li>微信: DREAM-FIRE-2024</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-semibold mb-4">关注我们</h3>
+      <div class="flex gap-4 text-2xl items-center relative">
+        <a href="https://github.com/ops-coffee/ansible-job-platform" target="_blank" class="hover:text-sky-600">
+          <i class="ri-github-fill"></i>
+        </a>
+
+        <div class="group relative">
+          <i class="ri-wechat-line hover:text-sky-600 cursor-pointer"></i>
+          <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-32 bg-white border border-gray-200 rounded-lg p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+            <img src="https://blog.ops-coffee.com/static/images/g-qrcode.jpg" alt="运维咖啡吧公众号二维码" class="w-full h-auto rounded" />
+            <p class="text-xs text-center text-slate-600 mt-1">运维咖啡吧</p>
+          </div>
+        </div>
+
+        <a href="https://blog.ops-coffee.com" target="_blank" class="hover:text-sky-600">
+          <i class="ri-earth-line"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="text-center text-sm text-slate-400 py-4 border-t border-gray-100">
+    © 2025 ops-coffee.cn. 保留所有权利。
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
