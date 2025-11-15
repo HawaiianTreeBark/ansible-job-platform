@@ -69,7 +69,8 @@ else:
 # 新建默认项目
 echo "📦 新建默认项目..."
 python3 manage.py shell -c "
-from sadmin.project.models import Project;
+from django.contrib.auth import get_user_model;
+from sadmin.project.models import Project, Member;
 if Project.objects.filter(english_name='default').exists():
     print('默认项目已存在')
 else:
@@ -77,6 +78,14 @@ else:
         create_user_id=1,
         english_name='default',
         chinese_name='默认项目',
+    )
+if Member.objects.filter(project_id=1, user_id=1).exists():
+    print('默认项目成员已存在')
+else:
+    Member.objects.create(
+        project=Project.objects.get(english_name='default'),
+        user=get_user_model().objects.get(username='admin@ops-coffee.com'),
+        is_owner=True,
     )
 " || { echo >&2 "新建默认项目失败"; exit 1; }
 
